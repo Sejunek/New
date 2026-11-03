@@ -14,16 +14,10 @@
 ## 개인정보와 메일
 DB, 분석 도구, 쿠키, localStorage, sessionStorage가 없습니다. 응답과 결과는 탭의 메모리에서만 계산합니다. 메일 입력값은 서버로 보내지 않으며 mailto로 기기의 메일 앱을 엽니다. 사용자가 직접 발송해야 합니다. 메일 앱 설치 및 본문 길이 제한에 따라 동작이 달라질 수 있어 결과 파일 저장을 제공합니다. 메일 전송 이후 메일 업체의 보관과 사이트 호스팅의 일반 접속 로그는 별개입니다. 자동 발송 기능은 포함하지 않았습니다.
 
-## GitHub에 올리고 무료 웹 주소 만들기
-1. GitHub 로그인 후 https://github.com/new 에서 `metacognition-meter` 이름의 Public 저장소를 만드세요. 공개 저장소의 소스와 정답은 누구나 볼 수 있습니다. 개인 결과는 저장소에 올라가지 않습니다.
-2. 저장소에서 Add file → Upload files를 열고 **dist 폴더 안의 다섯 파일**(index.html, style.css, app.js, questions.js, score.js — 총 다섯 파일)을 최상위에 업로드하고 Commit changes를 누르세요.
-3. Settings → Pages → Build and deployment에서 Deploy from a branch를 선택하세요.
-4. Branch를 main, 폴더를 /(root)로 선택하고 Save를 누르세요.
-5. 게시가 완료되면 Pages 화면에 표시되는 주소로 접속하세요. 일반적으로 https://사용자명.github.io/metacognition-meter/ 입니다.
-
-전체 프로젝트를 그대로 Git으로 올린다면 Pages 소스를 GitHub Actions로 설정하고 별도 정적 배포 구성을 해야 합니다. 위 절차는 dist 안 파일만 저장소 루트에 올리는 가장 간단한 방법입니다.
-
-공식 안내: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+## 웹 배포
+저장소: https://github.com/Sejunek/New
+서비스 주소: https://sejunek.github.io/New/
+GitHub Pages는 master 브랜치의 /(root)를 게시합니다. 최상위 파일을 수정하고 커밋하면 자동 반영됩니다.
 
 ## 수정
 문제·정답·해설은 questions.js, 계산은 score.js, 화면 동작은 app.js, 디자인은 style.css에서 수정하세요. API 키는 필요 없습니다. 테스트 정답은 클라이언트 코드에서 확인할 수 있으므로 고위험 평가나 부정행위 방지용으로 사용하지 마세요.
@@ -32,4 +26,5 @@ DB, 분석 도구, 쿠키, localStorage, sessionStorage가 없습니다. 응답�
 ## 기존 코드 보관
 2023년 프로젝트 원본 전체는 archive/legacy-2023/에 있습니다. 기존 커밋 b5d00e5088eb0e569b97d6b73733339c49075a5e에서도 확인할 수 있습니다.
 현재 메인은 저장소 최상위의 메타인지 측정기이며 별도 설치나 빌드가 필요 없습니다.
+
 
