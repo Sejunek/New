@@ -1,35 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./main.js"></script>
-    <style>
-        *{
-            margin: 0;
-            padding:0;
-        }
-
-        .box-wrap{
-            width:500px;
-            height: 500px;
-            display: flex;
-        }
-
-        .box{
-            width: 100%;
-            height: 100%;
-            background-color: #0000;
-        }
-    </style>
-</head>
-<body>
-    <div class="box-wrap">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </div>
-</body>
-</html>
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="12개의 문제와 확신도로 살펴보는 나를 아는 감각. 결과는 브라우저에서만 계산됩니다."><title>메타인지 측정기 — 나를 아는 감각</title><link rel="stylesheet" href="style.css"></head><body>
+<header><a href="./" class="brand">◒ <span>SELF / SENSE</span></a><span class="private">● 브라우저 안에서만 계산</span></header>
+<main id="app"></main><footer>SELF / SENSE <span>나를 아는 감각을 연습하는 작은 실험.</span><button id="method">측정 방식 · 개인정보</button></footer>
+<dialog id="info"><h2>점수는 어떻게 만들어지나요?</h2><p>매 문항의 확신도 p(0~1)와 정답 y(정답 1, 오답 0)의 차이를 제곱해 평균냅니다. 체험 점수는 round(100 × (1 − 평균((p − y)²)))입니다. 전체 예상 정답 수는 별도로 실제 정답 수와 비교하며 종합 점수에는 합산하지 않습니다.</p><p>0–33점은 ‘감각 탐색’, 34–66점은 ‘감각 조율’, 67–100점은 ‘감각 일치’입니다. 이 경계는 서비스 표시를 위한 임의 구간이며, 규준이나 백분위가 아닙니다. 문항별 확신도와 정확도를 비교하는 연구 아이디어를 참고했지만, 이 짧은 검사는 메타인지 능력 전반을 진단하는 검증된 심리검사가 아닙니다. 지식·문제 난도·운에도 영향을 받습니다.</p><p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4097944/" target="_blank" rel="noopener">참고: Fleming & Lau, How to measure metacognition (2014)</a></p><p>답변과 결과는 이 탭의 메모리에만 있습니다. 쿠키·분석 도구·로컬 저장소·결과 서버 전송을 사용하지 않습니다. 새로고침하거나 탭을 닫으면 사라집니다. 사이트 접속 자체에는 호스팅 제공자의 접속 로그가 남을 수 있습니다.</p><p>메일 작성 버튼은 기기의 메일 앱을 엽니다. 전송은 메일 앱에서 직접 완료합니다. 전송하면 수신자와 메일 제공업체에 결과가 보관될 수 있습니다. 기기에 저장 버튼은 사용자가 선택한 파일을 만듭니다.</p><form method="dialog"><button class="primary">확인</button></form></dialog>
+<script src="questions.js"></script><script src="score.js"></script><script src="app.js"></script></body></html>
