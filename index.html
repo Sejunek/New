@@ -1,6 +1,25 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="12개의 문제와 확신도로 살펴보는 나를 아는 감각. 결과는 브라우저에서만 계산됩니다."><title>메타인지 측정기 — 나를 아는 감각</title><link rel="stylesheet" href="style.css"></head><body>
-<header><a href="./" class="brand">◒ <span>SELF / SENSE</span></a><span class="private">● 브라우저 안에서만 계산</span></header>
-<main id="app"></main><footer>SELF / SENSE <span>나를 아는 감각을 연습하는 작은 실험.</span><button id="method">측정 방식 · 개인정보</button></footer>
-<dialog id="info"><h2>점수는 어떻게 만들어지나요?</h2><p>매 문항의 확신도 p(0~1)와 정답 y(정답 1, 오답 0)의 차이를 제곱해 평균냅니다. 체험 점수는 round(100 × (1 − 평균((p − y)²)))입니다. 전체 예상 정답 수는 별도로 실제 정답 수와 비교하며 종합 점수에는 합산하지 않습니다.</p><p>0–33점은 ‘감각 탐색’, 34–66점은 ‘감각 조율’, 67–100점은 ‘감각 일치’입니다. 이 경계는 서비스 표시를 위한 임의 구간이며, 규준이나 백분위가 아닙니다. 문항별 확신도와 정확도를 비교하는 연구 아이디어를 참고했지만, 이 짧은 검사는 메타인지 능력 전반을 진단하는 검증된 심리검사가 아닙니다. 지식·문제 난도·운에도 영향을 받습니다.</p><p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4097944/" target="_blank" rel="noopener">참고: Fleming & Lau, How to measure metacognition (2014)</a></p><p>답변과 결과는 이 탭의 메모리에만 있습니다. 쿠키·분석 도구·로컬 저장소·결과 서버 전송을 사용하지 않습니다. 새로고침하거나 탭을 닫으면 사라집니다. 사이트 접속 자체에는 호스팅 제공자의 접속 로그가 남을 수 있습니다.</p><p>메일 작성 버튼은 기기의 메일 앱을 엽니다. 전송은 메일 앱에서 직접 완료합니다. 전송하면 수신자와 메일 제공업체에 결과가 보관될 수 있습니다. 기기에 저장 버튼은 사용자가 선택한 파일을 만듭니다.</p><form method="dialog"><button class="primary">확인</button></form></dialog>
-<script src="questions.js"></script><script src="score.js"></script><script src="app.js"></script></body></html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101211">
+<meta name="description" content="10개의 질문, 두 개의 좌표. 나를 바라보는 마음과 그 마음의 흔들림을 살펴보세요. 이름과 응답은 이 브라우저에서만 처리됩니다.">
+<meta name="referrer" content="strict-origin-when-cross-origin"><title>SELF / SENSE — 나를 보는 나의 기준</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=2">
+</head><body>
+<a class="skip-link" href="#app">본문으로 이동</a>
+<header class="site-header"><button class="brand" id="home-button" aria-label="SELF SENSE 처음으로"><span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span>SELF<span class="brand-slash">/</span>SENSE<span class="version">02</span></button><div class="header-right"><span class="private"><i></i>이 탭에서만 진행</span><button class="icon-button" id="method" aria-label="측정 방식과 개인정보 안내">?</button></div></header>
+<main id="app" tabindex="-1"></main>
+<footer class="site-footer"><span>A LITTLE CLOSER TO YOURSELF.</span><span>10 QUESTIONS. TWO DIMENSIONS.</span></footer>
+<dialog id="info" class="modal" aria-labelledby="info-title">
+<div class="modal-top"><span class="eyebrow">ABOUT THIS CHECK-IN</span><button class="icon-button" data-close="info" aria-label="안내 닫기">×</button></div>
+<h2 id="info-title">내 응답은 어떻게 읽히나요?</h2>
+<p>홀수 문항 5개는 ‘자기 가치 수준’, 짝수 문항 5개는 ‘자기평가 안정성’을 살펴보는 자체 제작 질문입니다. 최근 한 달을 돌아본 자기보고 결과이며, 검증된 심리검사나 메타인지 능력의 진단이 아닙니다.</p>
+<p>각 축의 유효 응답 평균을 0–100으로 환산합니다. 자기 가치 수준은 오른쪽 응답일수록 높고, 안정성은 왼쪽 응답일수록 높습니다. ‘경험 없음’은 계산에서 제외하며 축마다 3개 이상 답해야 점수를 표시합니다. 0–33·34–66·67–100 구간은 화면 표시를 위한 임의 기준이며, 백분위나 임상 기준이 아닙니다.</p>
+<p>높은 자기 가치 수준은 우월함이나 과대평가를 의미하지 않으며, 낮은 수준도 과소평가를 확정하지 않습니다. 안정성은 본인이 기억하는 변동 경향입니다. 이 두 축으로 갈등 가능성이나 실제 자기평가의 정확성을 판정하지 않습니다.</p>
+<details class="method-details"><summary>참고한 연구</summary><ul><li>엄홍식·박기환(2026), 한국판 메타인지 자기평가 척도(K-MSAS) 타당화</li><li>정복성·함상우(2018), 메타인지, 자기효능감 및 자기존중감의 관계에 관한 연구</li><li>이금성(2024), LLM 기반 메타인지 진단평가 시스템 설계 및 구현</li><li><a href="https://doi.org/10.3389/fpsyg.2018.00091" target="_blank" rel="noopener noreferrer">Altmann & Roth(2018), Self-esteem Stability Scale</a></li></ul><p>이 서비스는 위 척도를 그대로 사용하거나 검증 결과를 승계하지 않습니다. AI가 응답을 분석하는 기능은 사용하지 않습니다.</p></details>
+<h3>이름과 답변은 저장하지 않아요.</h3>
+<p>이름·응답·결과·이메일 주소는 이 탭의 메모리에서만 처리하며 서버로 전송하지 않습니다. 쿠키, 분석 도구, 브라우저 저장소를 사용하지 않습니다. 새로고침·탭 닫기·새 검사 시작 시 검사 내용이 초기화됩니다. 호스팅 제공자의 일반적인 접속 로그는 별개입니다.</p>
+<p>메일 버튼은 기기의 메일 앱에 요약 결과를 채웁니다. 사용자가 직접 전송해야 하며, 전송 후에는 메일 제공업체와 수신자가 내용을 보관할 수 있습니다. 파일 저장은 사용자가 선택한 기기에 결과를 남깁니다.</p>
+<button class="button button-primary" data-close="info">확인했어요</button></dialog>
+<dialog id="restart-dialog" class="modal compact" aria-labelledby="restart-title"><span class="eyebrow">START AGAIN</span><h2 id="restart-title">처음부터 다시 할까요?</h2><p>현재 이름과 답변, 결과가 초기화됩니다.</p><div class="button-row"><button class="button button-secondary" data-close="restart-dialog">계속할게요</button><button class="button button-primary" id="confirm-restart">처음으로</button></div></dialog>
+<script src="questions.js?v=2"></script><script src="score.js?v=2"></script><script src="app.js?v=2"></script></body></html>
